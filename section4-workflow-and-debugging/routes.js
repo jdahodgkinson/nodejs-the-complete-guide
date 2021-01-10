@@ -7,7 +7,7 @@ const requestHandler = (req, res) => {
         res.setHeader('Content-Type', 'text/html');
         res.write('<html lang="en">');
         res.write('<head><title>Welcome!</title></head>');
-        res.write('<body><h1>Welcome to my NodeJS Server :)</h1></body>');
+        res.write('<body><h1>Welcome to my NodeJS Server <3</h1></body>');
         res.write('<form action="/create-user" method="post">');
         res.write('<input type="text" name="username">');
         res.write('<button type="submit">Submit</button>');
@@ -39,6 +39,7 @@ const requestHandler = (req, res) => {
             const username = parsedBody.split('=')[1];
             console.log(username);
         });
+        console.log("monster!");
         res.statusCode = 302;
         res.setHeader('Location', '/');
         res.end();
