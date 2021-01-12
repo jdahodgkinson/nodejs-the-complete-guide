@@ -1,0 +1,11 @@
+<%- include('includes/head.ejs') %>
+</head>
+<body>
+<%- include('includes/nav.ejs') %>
+<h3>Users</h3>
+<ul>
+    <% for (let user of users) { %>
+        <li><%= user %></li>
+    <% } %>
+</ul>
+</body>
