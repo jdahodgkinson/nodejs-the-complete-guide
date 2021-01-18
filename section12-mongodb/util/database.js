@@ -1,10 +1,7 @@
 const mongodb = require('mongodb');
-const password = require('secrets');
+const password = require('./secrets');
 
-const uri = `
-mongodb+srv://jack:${password}@cluster0.odzpe.mongodb.net/shop
-?retryWrites=true&w=majority
-`;
+const uri = `mongodb+srv://jack:${ password }@cluster0.odzpe.mongodb.net/shop?retryWrites=true&w=majority`;
 
 const MongoClient = mongodb.MongoClient(uri, { useUnifiedTopology: true });
 
